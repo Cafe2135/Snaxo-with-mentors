@@ -1,31 +1,34 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro; // Include this if you use TextMeshPro for labels
+using TMPro; // Remove if not using TextMeshPro
 
 public class PantryButton : MonoBehaviour
 {
-    private IngredientData data;
+    private IngredientData ingredient;
     private PantryManager manager;
-    
+
     public Image iconImage;
-    public TextMeshProUGUI nameText; // Optional: for the food name
+    public TextMeshProUGUI nameLabel;
 
-    // This is called by the PantryManager when the menu opens
-    public void Setup(IngredientData newData, PantryManager newManager)
+    public void Setup(IngredientData data, PantryManager pantry)
     {
-        data = newData;
-        manager = newManager;
+        ingredient = data;
+        manager = pantry;
 
-        if (iconImage != null)
-            iconImage.sprite = data.icon;
-            
-        if (nameText != null)
-            nameText.text = data.ingredientName;
+        if (iconImage != null) iconImage.sprite = data.icon;
+        if (nameLabel != null) nameLabel.text = data.ingredientName;
+
+        // Automatically add the listener so you don't have to do it manually in the Inspector
+        Button btn = GetComponent<Button>();
+        btn.onClick.RemoveAllListeners();
+        btn.onClick.AddListener(OnClick);
     }
 
-    // Connect this to the Button component's OnClick event in the Inspector
     public void OnClick()
     {
-        manager.GiveItemToPlayer(data);
+        if (manager != null && ingredient != null)
+        {
+            manager.GiveItemToPlayer(ingredient);
+        }
     }
 }

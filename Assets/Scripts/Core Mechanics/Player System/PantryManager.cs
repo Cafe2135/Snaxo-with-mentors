@@ -1,51 +1,48 @@
 using UnityEngine;
-using System.Collections.Generic;
 
 public class PantryManager : MonoBehaviour, IInteractable
 {
     [Header("UI References")]
-    public GameObject pantryUI;       // The Panel in your Canvas
-    public Transform buttonContainer; // The object with Grid Layout Group
-    public GameObject buttonPrefab;   // A Button with the PantryButton script
+    public GameObject pantryUI;
 
-    [Header("Data")]
-    public List<IngredientData> allIngredients;
+    // We manually assign the 3 buttons already in the scene
+    public PantryButton slot1;
+    public PantryButton slot2;
+    public PantryButton slot3;
+
+    [Header("Ingredient Data")]
+    public IngredientData item1;
+    public IngredientData item2;
+    public IngredientData item3;
 
     private PlayerController interactingPlayer;
 
     void Start()
     {
         pantryUI.SetActive(false);
-        PopulateMenu();
-    }
 
-    private void PopulateMenu()
-    {
-        foreach (IngredientData data in allIngredients)
-        {
-            GameObject btn = Instantiate(buttonPrefab, buttonContainer);
-            // Setup the button (See the PantryButton script in previous response)
-            btn.GetComponent<PantryButton>().Setup(data, this);
-        }
+        // Wire up the buttons manually at the start
+        if (slot1 != null && item1 != null) slot1.Setup(item1, this);
+        if (slot2 != null && item2 != null) slot2.Setup(item2, this);
+        if (slot3 != null && item3 != null) slot3.Setup(item3, this);
     }
 
     public void Interact(PlayerController player)
     {
         interactingPlayer = player;
         pantryUI.SetActive(true);
-        Cursor.lockState = CursorLockMode.None; // Free mouse to click
+        Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
 
     public void GiveItemToPlayer(IngredientData data)
     {
-        if (!interactingPlayer.IsHoldingItem())
+        if (interactingPlayer != null && !interactingPlayer.IsHoldingItem())
         {
             GameObject newFood = Instantiate(data.prefab);
             interactingPlayer.PickUpItem(newFood, data);
+            CloseMenu();
         }
-        
-        CloseMenu();
     }
 
     public void CloseMenu()

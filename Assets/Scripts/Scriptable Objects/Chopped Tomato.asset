@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77c9cd5f619e4cc4c825c6aa184b98bc, type: 3}
-  m_Name: CoralTomato
+  m_Name: Chopped Tomato
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
-  ingredientName: CoralTomato
-  icon: {fileID: 0}
-  prefab: {fileID: 0}
+  ingredientName: Chopped Tomato
+  icon: {fileID: 21300000, guid: 8adc28bc58a09254887473bcb848ffe2, type: 3}
+  prefab: {fileID: 7022777353979774736, guid: 89d3d3b8bfdf2a34495b954f4faae52a, type: 3}
   processedResult: {fileID: 0}
   cookTime: 5
