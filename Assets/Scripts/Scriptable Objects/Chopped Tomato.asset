@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Chopped Tomato
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
   ingredientName: Chopped Tomato
-  icon: {fileID: 21300000, guid: 8adc28bc58a09254887473bcb848ffe2, type: 3}
+  icon: {fileID: 21300000, guid: 736238023aaea2443b8dde41e6769015, type: 3}
   prefab: {fileID: 7022777353979774736, guid: 89d3d3b8bfdf2a34495b954f4faae52a, type: 3}
   processedResult: {fileID: 0}
   cookTime: 5

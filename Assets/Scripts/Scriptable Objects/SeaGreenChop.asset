@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SeaGreenChop
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
   ingredientName: Chopped Sea Green
-  icon: {fileID: 21300000, guid: 83f9af5bbbef37142a9a24e0d3f23d48, type: 3}
+  icon: {fileID: 21300000, guid: f4a8fc25f2faaa145881dfe0da082b4d, type: 3}
   prefab: {fileID: 7022777353979774736, guid: 16086901ff6a3ab4b8cb9bb903ad3a9c, type: 3}
   processedResult: {fileID: 0}
   cookTime: 5

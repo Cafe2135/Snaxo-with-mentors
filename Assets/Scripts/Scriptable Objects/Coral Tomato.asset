@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Coral Tomato
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
   ingredientName: Coral Tomato
-  icon: {fileID: 21300000, guid: fea3ade8015d8f74d9c3aa798a4ec70c, type: 3}
+  icon: {fileID: 21300000, guid: 6a0962003610d3b4da913f105dd9d8bc, type: 3}
   prefab: {fileID: 7022777353979774736, guid: 114cb0b37b9849f46abc662ab10503b8, type: 3}
   processedResult: {fileID: 11400000, guid: 34d18df192afb0e4797ee9d6de01e8a7, type: 2}
   cookTime: 5

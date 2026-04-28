@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SeaGreens
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
   ingredientName: Sea Greens
-  icon: {fileID: 21300000, guid: 48d923f15c6a1f34aaf61c427848acaa, type: 3}
+  icon: {fileID: 21300000, guid: 86b5ae3b1a318ad498c808a34ddb9214, type: 3}
   prefab: {fileID: 7022777353979774736, guid: 52920319f29c96b4dbe55e8db27117e1, type: 3}
   processedResult: {fileID: 11400000, guid: cfdbdc9e89cea62489322502b4a27c8d, type: 2}
   cookTime: 0
